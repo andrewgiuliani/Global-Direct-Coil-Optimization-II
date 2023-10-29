@@ -17,13 +17,14 @@ polishes these configurations for an accurate approximation of quasisymmetry.
 ## Installation
 To use this code, first clone the repository including all its submodules, via
 
-    git clone 
+    git clone --recursive
 
 Next, best practice is to generate a virtual environment and install PyPlasmaOpt there:
 
     cd simsopt
     python -m venv venv
     source venv/bin/activate
+    cd thirdparty/LinkingNumber/; mkdir build; cd build; cmake ..; make; cd ../../
     pip install -e .
 
 ## Running the scripts
